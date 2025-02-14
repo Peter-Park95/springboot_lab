@@ -21,6 +21,7 @@ public class ArticleService {
     private ArticleRepository articleRepository;
 
     public List<Article> index() {
+
         return articleRepository.findAll();
     }
 
