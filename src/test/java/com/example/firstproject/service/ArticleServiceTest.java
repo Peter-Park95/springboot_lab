@@ -58,7 +58,7 @@ class ArticleServiceTest {
     @Transactional
     @Test
     void create_실패() {
-        Long id = 4L;
+        Long id = -1L;
         String title = "라라라";
         String content = "4444";
         ArticleForm dto = new ArticleForm(id, title, content);
@@ -80,7 +80,7 @@ class ArticleServiceTest {
     @Transactional
     @Test
     void update_실패() {
-        Long id = 4L;
+        Long id = -1L;
         String title = "가가가";
         String content = "1111";
         ArticleForm dto = new ArticleForm(id, title, content);
@@ -99,7 +99,7 @@ class ArticleServiceTest {
     @Transactional
     @Test
     void delete_실패() {
-        Long id = 4L;
+        Long id = -1L;
         Article expected = null;
         Article article = articleService.delete(id);
         assertEquals(expected, article);
